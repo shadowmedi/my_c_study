@@ -12,7 +12,7 @@ char* my_strcat(char* dest, const char* source)
 	{
 		dest++;
 	}
-	while (*dest++ = *source++)//把源字符串的内容赋给源字符串
+	while (*dest++ = *source++)//把源字符串的内容赋给目标字符串尾部
 	{                                            //每次赋给一个字符，地址向后移动一位
 		;                                       //当找到源字符串的'\0'时，先把它赋给目标字符串，再退出循环
 	}

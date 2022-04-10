@@ -2,21 +2,23 @@
 #include <stdio.h>
 #include<assert.h>
 //从前往后依次比较字符的ASCII码值
-//当比较完任何一个'\0'终止比较
 int my_strcmp(const char* arr1, const char* arr2)
 {
 	assert(arr1 && arr2);
-	while (*arr1 == *arr2 && *arr1 != '\0')
+	while (*arr1 == *arr2 )//当两个字符相等时,比较下一对字符
 	{
+		if (*arr1 == '\0')//但如果都比较到'\0',说明两个字符串相等
+		{
+			return 0;
+		}
 		arr1++;
 		arr2++;
 	}
-	if (*(unsigned char*)arr1 > *(unsigned char*)arr2)
+	//当比较到有一对字符不相等时
+	if (*arr1 > *arr2)
 		return 1;
-	else if (*(unsigned char*)arr1 < *(unsigned char*)arr2)
+	else if (*arr1 < *arr2)
 		return -1;
-	else
-		return 0;
 }
 int main()
 {
