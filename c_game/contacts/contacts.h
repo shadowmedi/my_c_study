@@ -25,7 +25,9 @@ enum inputs                 //枚举常量使代码可读性提升
     delete,    //2
     modify,   //3 
     search,    //4
-    print        //5
+    print,        //5
+    clear,       //6
+    sort         //7
 };
                              
 void menu(void);//主菜单
@@ -43,5 +45,9 @@ void searchc(const Contact* con);//查找
 int findbyname(Contact* con,const char* getname);//通过输入的名字在通讯录中查找下标
 
 void printc(const Contact* con);//打印
+
+void clearc(Contact* con);//清空
+
+void sortc(Contact* con);//排序
 
 

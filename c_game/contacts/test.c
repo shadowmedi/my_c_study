@@ -7,6 +7,8 @@
 //3 修改联系人
 //4 查找联系人
 //5 打印
+//6清空联系人
+//7按名字排序所有联系人
 Contact con;//创建一个通讯录
 
 void test(void)
@@ -36,6 +38,12 @@ void test(void)
 			break;
 		case print:
 			printc(&con);
+			break;
+		case clear:
+			clearc(&con);
+			break;
+		case sort:
+			sortc(&con);
 			break;
 		default:
 			printf("输入错误，请重新输入！！！");

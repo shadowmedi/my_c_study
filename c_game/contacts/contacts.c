@@ -8,7 +8,7 @@ void menu(void)
 	printf("1 add             2 delete        \n");
 	printf("3 modify        4 search        \n");
 	printf("5 print            0 exit             \n");
-	printf("                                            \n");
+	printf("6 clear            7 sort             \n");
 	printf("*****************************\n");
 	printf("*****************************\n");
 }
@@ -126,6 +126,31 @@ void printc(const Contact* con)
 	}
 }
 
+void clearc(Contact* con)
+{
+	init(Contact * con);
+}
+
+void sortc(Contact* con)
+{
+	for (int i = 0; i < con->current - 1; i++)
+	{
+		int ass = 1;
+		for (int k = 0; k < con->current - 1 - i; k++)
+		{
+			if (strcmp(con->data[k].name, con->data[k + 1].name) > 0)
+			{
+				//½»»»
+				ass = 0;
+				Persons tem = con->data[k];
+				con->data[k] = con->data[k + 1];
+				con->data[k + 1] = tem;
+			}
+		}
+		if (ass == 1)
+			return;
+	}
+}
 
 
 
