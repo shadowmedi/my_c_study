@@ -6,8 +6,11 @@ void test1()
 	SequenceListInit(&sqlist);
 	human data1 = { 30,"v", "ÄÐ" };
 	human data2 = { 20 , "ve", "ÄÐ" };
-	SequenceListPushFront(&sqlist, data1);
-	SequenceListPushFront(&sqlist, data2);
+	SequenceListInsert(&sqlist, 0, &data1);
+	SequenceListInsert(&sqlist, 0, &data2);
+	SequenceListPrint(&sqlist);
+	SequenceListErase(&sqlist, 0);
+	SequenceListPrint(&sqlist);
 }
 int main()
 {
